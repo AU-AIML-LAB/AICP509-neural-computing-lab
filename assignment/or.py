@@ -32,9 +32,22 @@ if __name__ == '__main__':
     y = np.array([0, 1, 1, 1])
 
     perceptron = Perceptron()
-    perceptron.fit(X, y, epoch=3)
-    for x in X:
-        print(x, perceptron.predict(x))
+
+    print("OR Gate: ")
+    for x, y_i in zip(X, y):
+        print(x, y_i)
+
+    print("Initial Weights:")
     print(perceptron.weights, perceptron.bias)
 
-    print(perceptron.score(X, y))
+    perceptron.fit(X, y, epoch=3)
+
+    print("Trained Weights:")
+    print(perceptron.weights, perceptron.bias)
+
+    
+    print("OR Gate(predicted): ")
+    for x in X:
+        print(x, perceptron.predict(x))
+        
+    print("Accuracy:", perceptron.score(X, y))
