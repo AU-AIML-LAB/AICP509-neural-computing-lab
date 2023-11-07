@@ -62,6 +62,8 @@ disp('A U o: '); disp(max(a, o)); disp('A: '); disp(a);
 disp('A N o: '); disp(min(a, o)); disp('o: '); disp(o);
 
 % Axiom of Excluded middle
+disp('Axiom of Excluded middle')
 disp('A U A_i'); disp(max(a, 1-a)); disp('E:' ); disp(e);
 % Axiom of Contradiction
+disp('Axiom of Contradiction')
 disp('A N A_i'); disp(min(a, 1-a)); disp('o:' ); disp(o);
